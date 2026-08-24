@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo-tomatix.png" alt="Logo TOMATIX" width="650">
+  <img src="https://github.com/viniasouza/tomatix/blob/main/assets/logo.png?raw=true" alt="Logo TOMATIX" width="650">
 </p>
 
 A TOMATIX é uma solução de tecnologia voltada para produtores de tomate em estufas.
