@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Financeira - Tomatix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="navbar">
+
+        </div>
+    </div>
+
+    <h2>Calculadora Financeira - Tomatix</h2>
+    <p>Sabia que você pode estar deixando dinheiro na mesa apenas por não realizar um controle eficiente da luminosidade
+        da sua estufa?
+        <br>Com a tomatix, você realiza o controle inteligente da sua estufa e consegue acompanhar o nivel ideal de
+        luminosidade em cada fase da sua plantação.
+    </p>
+
+    <br>
+
+
+    <div class="container">
+
+        <div class="formCalculadora">
+
+            <div class="inputs">
+                <span>Calcule abaixo o seu potencial de produção com um controle inteligente de luminosidade:</span>
+
+                <br>
+
+                <label for="ipt_area">Digite sua área de plantação</label>
+                <input type="text" id="ipt_area">
+
+                <br>
+
+                <label for="ipt_ultimaColheita">Digite sua última colheita em KG:</label>
+                <input type="text" id="ipt_ultimaColheita">
+
+                <br>
+
+                <label for="ipt_preco">Digite o preço médio de venda por KG:</label>
+                <input type="text" id="ipt_preco">
+
+                <br>
+                <br>
+
+                <button onclick="calcularResultado()">Calcular Resultado</button>
+            </div>
+
+            <div class="resultado" id="resultado">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos accusantium quidem aspernatur dolorem
+                    veniam maiores, dolores eius velit nam voluptatibus. Nemo quo, inventore voluptatem quos ipsam nihil
+                    voluptatibus delectus illum.</p>
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+    function calcularResultado() {
+        let producaoReferencia = 16;
+
+        let area = Number(ipt_area.value);
+        let ultimaColheita = Number(ipt_ultimaColheita.value);
+        let precoKg = Number(ipt_preco.value);
+
+        // Processamento
+        let producaoM2 = ultimaColheita / area; // Quanto é a produtividade dele por M²
+        let producaoPotencial = area * producaoReferencia;
+        let aumentoPotencial = producaoPotencial - ultimaColheita;
+
+        let aumentoPercentual = (aumentoPotencial / ultimaColheita) * 100;
+
+        let faturamentoPotencial = aumentoPotencial * precoKg;
+
+
+        resultado.innerHTML = `Produção atual: ${producaoM2} kg/m²<br>
+            Produção potencial: ${producaoReferencia} kg/m² <br>
+            Potencial de aumento: <br>
+            +${(aumentoPercentual).toFixed(2)}% <br>
+            +${producaoPotencial} kg <br>
+            Faturamento adicional estimado: <br>
+            +R$ ${faturamentoPotencial} <br>
+            `
+        
+    }
+
+</script>

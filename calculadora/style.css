@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 100px;
+    justify-content: center;
+    text-align: center;
+}
+.container{
+    justify-content: center;
+    padding: 100px;
+
+}
+
+.formCalculadora{
+    padding: 20px;
+    width: 90%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: beige;
+    border-radius: 5px;
+    gap: 100px;
+}
+.resultado{
+    width: 30%;
+    
+}
